@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aquivora-study | Class 10 Study Resources</title>
+
+    <meta name="description"
+          content="Aquivora-study is a free Class 10 study platform with notes, questions, revision resources and educational materials.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7ff;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        header {
+            background: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #4f46e5;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #172033;
+            margin-left: 20px;
+            font-weight: 600;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #eef2ff, #ffffff);
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 8vw, 80px);
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #4f46e5;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 19px;
+            color: #596579;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #4f46e5;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(79,70,229,0.3);
+        }
+
+        .subjects {
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .subjects h2 {
+            font-size: 38px;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .founder {
+            padding: 80px 8%;
+            background: #111827;
+            color: white;
+            text-align: center;
+        }
+
+        .founder h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .founder p {
+            max-width: 700px;
+            margin: 10px auto;
+            color: #d1d5db;
+        }
+
+        footer {
+            background: #080d18;
+            color: #9ca3af;
+            text-align: center;
+            padding: 30px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">AQUIVORA-STUDY</div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#subjects">Class 10</a>
+        <a href="#founder">Founder</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <h1>
+        Learn. <span>Revise.</span> Achieve.
+    </h1>
+
+    <p>
+        Welcome to Aquivora-study — a student-focused platform
+        designed to make Class 10 learning simpler, organized
+        and more accessible.
+    </p>
+
+    <a href="#subjects" class="button">
+        Explore Resources
+    </a>
+
+</section>
+
+<section class="subjects" id="subjects">
+
+    <h2>Explore Class 10</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>📐 Mathematics</h3>
+            <p>
+                Notes, questions, formulas and revision resources.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🔬 Science</h3>
+            <p>
+                Physics, Chemistry and Biology study resources.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌍 Social Science</h3>
+            <p>
+                History, Geography, Political Science and Economics.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📘 English</h3>
+            <p>
+                Literature, grammar, writing and revision resources.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="founder" id="founder">
+
+    <h2>Founder's Corner</h2>
+
+    <h3>Abhisek Panda</h3>
+
+    <p>
+        Founder of Aquivora-study
+    </p>
+
+    <p>
+        Aquivora-study is being created with a simple vision:
+        to make organized and useful study resources easier
+        for students to discover and use.
+    </p>
+
+    <p>
+        Keep learning. Keep improving. Keep moving forward.
+    </p>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 Aquivora-study. All rights reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
