@@ -1338,8 +1338,13 @@ blockquote {
 }
 
 
-@media (max-width: 600px) {
+.founder-image-wrapper-inner {
 
+    width: 260px;
+
+    height: 340px;
+
+    }
     .nav-container {
         padding: 16px 18px;
     }
