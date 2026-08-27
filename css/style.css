@@ -2022,3 +2022,106 @@ blockquote {
     }
 
         }
+
+
+
+/* ==================================================
+   AQUIVORA RESOURCE LIBRARY - MOBILE FIX
+================================================== */
+
+.resource-library {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.resource-library-container {
+    width: min(1150px, 100%) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.resource-heading {
+    text-align: center !important;
+}
+
+.resource-search {
+    width: min(700px, 100%) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.resource-search input {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.resource-filters {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 10px !important;
+}
+
+.resource-filter {
+    border-radius: 999px !important;
+    cursor: pointer !important;
+}
+
+.resource-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 22px !important;
+}
+
+.resource-card {
+    box-sizing: border-box !important;
+    border-radius: 25px !important;
+    padding: 30px !important;
+    display: block !important;
+}
+
+.resource-card-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.resource-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+}
+
+.resource-view-btn {
+    background: transparent !important;
+    border: 0 !important;
+    cursor: pointer !important;
+}
+
+@media (max-width: 700px) {
+
+    .resource-library {
+        padding: 75px 15px !important;
+    }
+
+    .resource-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .resource-card {
+        width: 100% !important;
+        padding: 25px !important;
+    }
+
+    .resource-filters {
+        justify-content: flex-start !important;
+        overflow-x: auto !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .resource-filter {
+        flex: 0 0 auto !important;
+    }
+
+}
+
