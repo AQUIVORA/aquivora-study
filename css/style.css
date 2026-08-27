@@ -1506,3 +1506,519 @@ blockquote {
 
     color: white;
 }
+
+/* =========================================
+   AQUIVORA RESOURCE LIBRARY
+========================================= */
+
+.resource-library {
+
+    position: relative;
+
+    padding: 110px 20px;
+
+    overflow: hidden;
+
+}
+
+
+.resource-library-container {
+
+    width: min(1150px, 100%);
+
+    margin: 0 auto;
+
+}
+
+
+/* ---------- Heading ---------- */
+
+.resource-heading {
+
+    text-align: center;
+
+    max-width: 720px;
+
+    margin: 0 auto 45px;
+
+}
+
+
+.section-label {
+
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    opacity: 0.7;
+
+}
+
+
+.resource-heading h2 {
+
+    margin: 0 0 18px;
+
+    font-size: clamp(2.2rem, 5vw, 4rem);
+
+    line-height: 1.05;
+
+}
+
+
+.resource-heading p {
+
+    margin: 0 auto;
+
+    max-width: 600px;
+
+    line-height: 1.8;
+
+    opacity: 0.72;
+
+}
+
+
+/* ---------- Search ---------- */
+
+.resource-search {
+
+    position: relative;
+
+    width: min(700px, 100%);
+
+    margin: 0 auto 30px;
+
+}
+
+
+.resource-search-icon {
+
+    position: absolute;
+
+    left: 20px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 1.1rem;
+
+    pointer-events: none;
+
+}
+
+
+.resource-search input {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 18px 20px 18px 55px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.05);
+
+    color: inherit;
+
+    font-size: 1rem;
+
+    outline: none;
+
+    backdrop-filter: blur(15px);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.resource-search input::placeholder {
+
+    opacity: 0.5;
+
+}
+
+
+.resource-search input:focus {
+
+    border-color: rgba(139,124,255,0.65);
+
+    background: rgba(255,255,255,0.07);
+
+    box-shadow:
+        0 0 30px rgba(139,124,255,0.12);
+
+}
+
+
+/* ---------- Filters ---------- */
+
+.resource-filters {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 45px;
+
+}
+
+
+.resource-filter {
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    background: rgba(255,255,255,0.04);
+
+    color: inherit;
+
+    padding: 11px 17px;
+
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    font: inherit;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+
+.resource-filter:hover {
+
+    transform: translateY(-3px);
+
+    background: rgba(255,255,255,0.08);
+
+}
+
+
+.resource-filter.active {
+
+    background: rgba(139,124,255,0.18);
+
+    border-color: rgba(139,124,255,0.55);
+
+}
+
+
+/* ---------- Cards ---------- */
+
+.resource-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+
+}
+
+
+.resource-card {
+
+    position: relative;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    border: 1px solid rgba(255,255,255,0.09);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.07),
+            rgba(255,255,255,0.025)
+        );
+
+    backdrop-filter: blur(16px);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.45s ease,
+        border-color 0.45s ease,
+        box-shadow 0.45s ease;
+
+}
+
+
+.resource-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    top: -100px;
+
+    right: -80px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(139,124,255,0.12);
+
+    filter: blur(20px);
+
+    pointer-events: none;
+
+}
+
+
+.resource-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(139,124,255,0.3);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.25);
+
+}
+
+
+/* ---------- Card Content ---------- */
+
+.resource-card-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 17px;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    font-size: 1.7rem;
+
+}
+
+
+.resource-card-subject {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    opacity: 0.55;
+
+}
+
+
+.resource-card h3 {
+
+    margin: 0 0 12px;
+
+    font-size: 1.65rem;
+
+}
+
+
+.resource-card p {
+
+    margin: 0 0 22px;
+
+    line-height: 1.7;
+
+    opacity: 0.7;
+
+}
+
+
+/* ---------- Tags ---------- */
+
+.resource-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.resource-tags span {
+
+    padding: 7px 10px;
+
+    border-radius: 8px;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    font-size: 0.75rem;
+
+    opacity: 0.75;
+
+}
+
+
+/* ---------- View Button ---------- */
+
+.resource-view-btn {
+
+    border: 0;
+
+    background: transparent;
+
+    color: inherit;
+
+    padding: 0;
+
+    font: inherit;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.resource-view-btn:hover {
+
+    transform: translateX(5px);
+
+}
+
+
+/* ---------- No Results ---------- */
+
+.resource-no-results {
+
+    display: none;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+}
+
+
+.resource-no-results.show {
+
+    display: block;
+
+}
+
+
+.no-results-icon {
+
+    font-size: 2.5rem;
+
+    margin-bottom: 15px;
+
+}
+
+
+.resource-no-results h3 {
+
+    margin: 0 0 10px;
+
+}
+
+
+.resource-no-results p {
+
+    margin: 0;
+
+    opacity: 0.65;
+
+}
+
+
+/* =========================================
+   MOBILE RESOURCE LIBRARY
+========================================= */
+
+@media (max-width: 700px) {
+
+    .resource-library {
+
+        padding: 80px 16px;
+
+    }
+
+
+    .resource-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .resource-card {
+
+        padding: 25px;
+
+    }
+
+
+    .resource-filters {
+
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        flex-wrap: nowrap;
+
+        padding-bottom: 8px;
+
+    }
+
+
+    .resource-filter {
+
+        flex: 0 0 auto;
+
+    }
+
+        }
