@@ -143,40 +143,48 @@ window.addEventListener(
     }
 );
 
+/*
+========================================
+AQUIVORA RESOURCE LIBRARY
+SEARCH + FILTER SYSTEM
+======================================== */
 
-/* ==================================================
-   AQUIVORA RESOURCE LIBRARY
-   SEARCH + FILTER SYSTEM
-================================================== */
 document.addEventListener("DOMContentLoaded", function () {
 
     const searchInput = document.getElementById("resourceSearch");
 
-    const filterButtons = document.querySelectorAll(".resource-filter");
+    const filterButtons = document.querySelectorAll(
+        ".resource-filter"
+    );
 
-    const resourceCards = document.querySelectorAll(".resource-card");
+    const resourceCards = document.querySelectorAll(
+        ".resource-card"
+    );
 
-    const noResults = document.getElementById("resourceNoResults");
-
+    const noResults = document.getElementById(
+        "resourceNoResults"
+    );
 
     let currentFilter = "all";
 
 
     function updateResources() {
 
-        const searchText = searchInput.value
-            .toLowerCase()
-            .trim();
-
+        const searchText = searchInput
+            ? searchInput.value.toLowerCase().trim()
+            : "";
 
         let visibleCards = 0;
 
 
         resourceCards.forEach(function (card) {
 
-            const subject = card.dataset.subject || "";
+            const subject =
+                card.getAttribute("data-subject") || "";
 
-            const searchData = card.dataset.search || "";
+            const searchData =
+                card.getAttribute("data-search") || "";
+
 
             const matchesFilter =
                 currentFilter === "all" ||
@@ -205,18 +213,26 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-        if (visibleCards === 0) {
+        if (noResults) {
 
-            noResults.classList.add("show");
+            if (visibleCards === 0) {
 
-        } else {
+                noResults.classList.add("show");
 
-            noResults.classList.remove("show");
+            } else {
+
+                noResults.classList.remove("show");
+
+            }
 
         }
 
     }
 
+
+    /* ================================
+       SUBJECT FILTER BUTTONS
+    ================================= */
 
     filterButtons.forEach(function (button) {
 
@@ -233,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             currentFilter =
-                button.dataset.filter;
+                button.getAttribute("data-filter") || "all";
 
 
             updateResources();
@@ -243,11 +259,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    searchInput.addEventListener(
-        "input",
-        updateResources
-    );
+    /* ================================
+       SEARCH BOX
+    ================================= */
 
+    if (searchInput) {
+
+        searchInput.addEventListener(
+            "input",
+            updateResources
+        );
+
+    }
+
+
+    /* ================================
+       INITIAL LOAD
+    ================================= */
 
     updateResources();
 
