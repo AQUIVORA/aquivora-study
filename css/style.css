@@ -1599,19 +1599,20 @@ blockquote {
 
 
 .resource-search-icon {
-
     position: absolute;
-
     left: 20px;
-
     top: 50%;
-
     transform: translateY(-50%);
-
-    font-size: 1.1rem;
-
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: #b9a7ff;
     pointer-events: none;
-
+    z-index: 5;
 }
 
 
