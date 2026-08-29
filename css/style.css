@@ -2077,7 +2077,7 @@ blockquote {
     box-sizing: border-box !important;
     border-radius: 25px !important;
     padding: 30px !important;
-    display: block !important;
+    display: block;
 }
 
 .resource-card-icon {
