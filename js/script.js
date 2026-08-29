@@ -200,13 +200,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (matchesFilter && matchesSearch) {
 
-                card.style.display = "";
+    card.style.setProperty("display", "block", "important");
 
-                visibleCards++;
+    visibleCards++;
 
-            } else {
+} else {
 
-                card.style.display = "none";
+    card.style.setProperty("display", "none", "important");
 
             }
 
