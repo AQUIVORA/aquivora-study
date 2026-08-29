@@ -142,3 +142,113 @@ window.addEventListener(
 
     }
 );
+
+
+/* ==================================================
+   AQUIVORA RESOURCE LIBRARY
+   SEARCH + FILTER SYSTEM
+================================================== */
+document.addEventListener("DOMContentLoaded", function () {
+
+    const searchInput = document.getElementById("resourceSearch");
+
+    const filterButtons = document.querySelectorAll(".resource-filter");
+
+    const resourceCards = document.querySelectorAll(".resource-card");
+
+    const noResults = document.getElementById("resourceNoResults");
+
+
+    let currentFilter = "all";
+
+
+    function updateResources() {
+
+        const searchText = searchInput.value
+            .toLowerCase()
+            .trim();
+
+
+        let visibleCards = 0;
+
+
+        resourceCards.forEach(function (card) {
+
+            const subject = card.dataset.subject || "";
+
+            const searchData = card.dataset.search || "";
+
+            const matchesFilter =
+                currentFilter === "all" ||
+                subject === currentFilter;
+
+
+            const matchesSearch =
+                searchText === "" ||
+                searchData
+                    .toLowerCase()
+                    .includes(searchText);
+
+
+            if (matchesFilter && matchesSearch) {
+
+                card.style.display = "";
+
+                visibleCards++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+
+        if (visibleCards === 0) {
+
+            noResults.classList.add("show");
+
+        } else {
+
+            noResults.classList.remove("show");
+
+        }
+
+    }
+
+
+    filterButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            filterButtons.forEach(function (btn) {
+
+                btn.classList.remove("active");
+
+            });
+
+
+            button.classList.add("active");
+
+
+            currentFilter =
+                button.dataset.filter;
+
+
+            updateResources();
+
+        });
+
+    });
+
+
+    searchInput.addEventListener(
+        "input",
+        updateResources
+    );
+
+
+    updateResources();
+
+});
