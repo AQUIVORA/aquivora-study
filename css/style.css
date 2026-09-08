@@ -2126,3 +2126,86 @@ blockquote {
 
 }
 
+
+/* =====================================================
+   AQUiVORA — CHAPTER RESOURCE CARDS
+   ===================================================== */
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.resource-card {
+    padding: 30px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                background 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(139, 124, 255, 0.6);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.resource-icon {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.resource-card h2 {
+    margin: 0 0 12px;
+    font-size: 28px;
+}
+
+.resource-card p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.resource-card .button {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    background: #8b7cff;
+    color: white;
+    font-weight: 600;
+    transition: transform 0.25s ease,
+                opacity 0.25s ease;
+}
+
+.resource-card .button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .resource-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 30px;
+    }
+
+    .resource-card {
+        padding: 25px;
+    }
+
+    .resource-card h2 {
+        font-size: 25px;
+    }
+
+    .resource-icon {
+        font-size: 38px;
+    }
+}
