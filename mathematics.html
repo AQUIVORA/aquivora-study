@@ -1,1 +1,810 @@
-<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aquivora | Mathematics</title><link rel="stylesheet" href="css/style.css"></head><body><div class="wrap"><header class="hero"><div class="eyebrow">AQUIVORA • CLASS 10</div><h1>Mathematics</h1><p class="lead">All 14 chapters — fully connected.</p></header><main class="grid"><a class="card" href="real-numbers.html"><div class="num">CHAPTER 01</div><h2>Real Numbers</h2><p class="muted">Notes, questions, practice and quick revision.</p><span class="btn">Open Chapter →</span></a><a class="card" href="polynomials.html"><div class="num">CHAPTER 02</div><h2>Polynomials</h2><p class="muted">Notes, questions, practice and quick revision.</p><span class="btn">Open Chapter →</span></a><a class="card" href="pair-of-linear-equations.html"><div class="num">CHAPTER 03</div><h2>Pair of Linear Equations in Two Variables</h2><p class="muted">Notes, questions, practice and quick revision.</p><span class="btn">Open Chapter →</span></a><a class="card" href="quadratic-equations.html"><div class="num">CHAPTER 04</div><h2>Quadratic Equations</h2><p class="muted">Notes, questions, practice and quick revision.</p><span class="btn">Open Chapter →</span></a><a class="card" href="arithmetic-progressions.html"><div class="num">CHAPTER 05</div><h2>Arithmetic Progressions</h2><p class="muted">Notes, questions, practice and quick revision.</p><span class="btn">Open Chapter →</span></a><a class="card" href="triangles.html"><div class="num">CHAPTER 06</div><h2>Triangles</h2><p class="muted">Notes, questions, practice and quick revision.</p><span class="btn">Open Chapter →</span></a><a class="card" href="coordinate-geometry.html"><div class="num">CHAPTER 07</div><h2>Coordinate Geometry</h2><p class="muted">Notes, questions, practice and quick revision.</p><span class="btn">Open Chapter →</span></a><a class="card" href="introduction-to-trigonometry.html"><div class="num">CHAPTER 08</div><h2>Introduction to Trigonometry</h2><p class="muted">Notes, questions, practice and quick revision.</p><span class="btn">Open Chapter →</span></a><a class="card" href="applications-of-trigonometry.html"><div class="num">CHAPTER 09</div><h2>Some Applications of Trigonometry</h2><p class="muted">Notes, questions, practice and quick revision.</p><span class="btn">Open Chapter →</span></a><a class="card" href="circles.html"><div class="num">CHAPTER 10</div><h2>Circles</h2><p class="muted">Notes, questions, practice and quick revision.</p><span class="btn">Open Chapter →</span></a><a class="card" href="areas-related-to-circles.html"><div class="num">CHAPTER 11</div><h2>Areas Related to Circles</h2><p class="muted">Notes, questions, practice and quick revision.</p><span class="btn">Open Chapter →</span></a><a class="card" href="surface-areas-and-volumes.html"><div class="num">CHAPTER 12</div><h2>Surface Areas and Volumes</h2><p class="muted">Notes, questions, practice and quick revision.</p><span class="btn">Open Chapter →</span></a><a class="card" href="statistics.html"><div class="num">CHAPTER 13</div><h2>Statistics</h2><p class="muted">Notes, questions, practice and quick revision.</p><span class="btn">Open Chapter →</span></a><a class="card" href="probability.html"><div class="num">CHAPTER 14</div><h2>Probability</h2><p class="muted">Notes, questions, practice and quick revision.</p><span class="btn">Open Chapter →</span></a></main><footer>Aquivora Study</footer></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="Aquivora Class 10 Mathematics — chapter notes, questions, practice and quick revision resources.">
+
+<title>Aquivora | Class 10 Mathematics</title>
+
+<style>
+
+/* ================================
+   AQUIVORA MATHEMATICS PAGE
+   ================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(92, 84, 180, 0.25),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(0, 140, 190, 0.20),
+            transparent 35%
+        ),
+        #080914;
+
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+
+/* ================================
+   MAIN CONTAINER
+   ================================ */
+
+.page {
+    width: min(1150px, 92%);
+    margin: auto;
+    padding: 30px 0 70px;
+}
+
+
+/* ================================
+   BACK BUTTON
+   ================================ */
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    padding: 11px 18px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.05);
+
+    transition: 0.3s ease;
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.10);
+}
+
+
+/* ================================
+   HERO
+   ================================ */
+
+.hero {
+    text-align: center;
+    padding: 65px 10px 55px;
+}
+
+.eyebrow {
+    color: #9b91ff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 9vw, 82px);
+    line-height: 1;
+    margin-bottom: 22px;
+    font-weight: 800;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: clamp(17px, 3vw, 21px);
+    line-height: 1.7;
+}
+
+
+/* ================================
+   CHAPTER GRID
+   ================================ */
+
+.chapter-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 24px;
+}
+
+
+/* ================================
+   CHAPTER CARD
+   ================================ */
+
+.chapter-card {
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 310px;
+
+    padding: 30px;
+
+    text-decoration: none;
+    color: #ffffff;
+
+    border-radius: 24px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.09),
+            rgba(255,255,255,0.025)
+        );
+
+    backdrop-filter: blur(15px);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Glow */
+
+.chapter-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -80px;
+    top: -80px;
+
+    background: rgba(120,110,255,0.18);
+
+    border-radius: 50%;
+
+    filter: blur(30px);
+
+    transition: 0.4s ease;
+}
+
+
+.chapter-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: rgba(140,130,255,0.55);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.35);
+}
+
+
+.chapter-card:hover::before {
+
+    transform: scale(1.4);
+
+}
+
+
+/* ================================
+   CHAPTER NUMBER
+   ================================ */
+
+.chapter-number {
+
+    position: relative;
+
+    color: #9b91ff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+
+/* ================================
+   CHAPTER TITLE
+   ================================ */
+
+.chapter-card h2 {
+
+    position: relative;
+
+    font-size: 27px;
+
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+}
+
+
+/* ================================
+   DESCRIPTION
+   ================================ */
+
+.chapter-card p {
+
+    position: relative;
+
+    color: rgba(255,255,255,0.62);
+
+    line-height: 1.65;
+
+    font-size: 16px;
+
+    flex: 1;
+}
+
+
+/* ================================
+   OPEN BUTTON
+   ================================ */
+
+.open-button {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: fit-content;
+
+    margin-top: 25px;
+
+    padding: 12px 18px;
+
+    border-radius: 12px;
+
+    background: #756cff;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+
+.chapter-card:hover .open-button {
+
+    transform: translateX(5px);
+
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 65px;
+
+    color: rgba(255,255,255,0.4);
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 600px) {
+
+    .page {
+        width: 90%;
+        padding-top: 20px;
+    }
+
+    .hero {
+        padding: 50px 5px 40px;
+    }
+
+    .eyebrow {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .chapter-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .chapter-card {
+        min-height: 280px;
+        padding: 25px;
+        border-radius: 20px;
+    }
+
+    .chapter-card h2 {
+        font-size: 25px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+    <!-- BACK TO AQUIVORA -->
+
+    <a href="index.html"
+       class="back-button">
+
+        ← Back to Aquivora
+
+    </a>
+
+
+    <!-- ================================
+         HEADER
+         ================================ -->
+
+    <header class="hero">
+
+        <div class="eyebrow">
+            AQUIVORA • CLASS 10
+        </div>
+
+        <h1>
+            Mathematics
+        </h1>
+
+        <p>
+            Explore all Class 10 Mathematics chapters,
+            with notes, important questions, practice
+            material and quick revision resources.
+        </p>
+
+    </header>
+
+
+    <!-- ================================
+         CHAPTERS
+         ================================ -->
+
+    <main class="chapter-grid">
+
+
+        <!-- CHAPTER 01 -->
+
+        <a href="real-numbers.html"
+           class="chapter-card">
+
+            <div class="chapter-number">
+                CHAPTER 01
+            </div>
+
+            <h2>
+                Real Numbers
+            </h2>
+
+            <p>
+                Notes, important questions,
+                practice material and quick
+                revision resources.
+            </p>
+
+            <span class="open-button">
+                Open Chapter →
+            </span>
+
+        </a>
+
+
+        <!-- CHAPTER 02 -->
+
+        <a href="polynomials.html"
+           class="chapter-card">
+
+            <div class="chapter-number">
+                CHAPTER 02
+            </div>
+
+            <h2>
+                Polynomials
+            </h2>
+
+            <p>
+                Notes, important questions,
+                practice material and quick
+                revision resources.
+            </p>
+
+            <span class="open-button">
+                Open Chapter →
+            </span>
+
+        </a>
+
+
+        <!-- CHAPTER 03 -->
+
+        <a href="pair-of-linear-equations.html"
+           class="chapter-card">
+
+            <div class="chapter-number">
+                CHAPTER 03
+            </div>
+
+            <h2>
+                Pair of Linear Equations
+                in Two Variables
+            </h2>
+
+            <p>
+                Notes, important questions,
+                practice material and quick
+                revision resources.
+            </p>
+
+            <span class="open-button">
+                Open Chapter →
+            </span>
+
+        </a>
+
+
+        <!-- CHAPTER 04 -->
+
+        <a href="quadratic-equations.html"
+           class="chapter-card">
+
+            <div class="chapter-number">
+                CHAPTER 04
+            </div>
+
+            <h2>
+                Quadratic Equations
+            </h2>
+
+            <p>
+                Notes, important questions,
+                practice material and quick
+                revision resources.
+            </p>
+
+            <span class="open-button">
+                Open Chapter →
+            </span>
+
+        </a>
+
+
+        <!-- CHAPTER 05 -->
+
+        <a href="arithmetic-progressions.html"
+           class="chapter-card">
+
+            <div class="chapter-number">
+                CHAPTER 05
+            </div>
+
+            <h2>
+                Arithmetic Progressions
+            </h2>
+
+            <p>
+                Notes, important questions,
+                practice material and quick
+                revision resources.
+            </p>
+
+            <span class="open-button">
+                Open Chapter →
+            </span>
+
+        </a>
+
+
+        <!-- CHAPTER 06 -->
+
+        <a href="triangles.html"
+           class="chapter-card">
+
+            <div class="chapter-number">
+                CHAPTER 06
+            </div>
+
+            <h2>
+                Triangles
+            </h2>
+
+            <p>
+                Notes, important questions,
+                practice material and quick
+                revision resources.
+            </p>
+
+            <span class="open-button">
+                Open Chapter →
+            </span>
+
+        </a>
+
+
+        <!-- CHAPTER 07 -->
+
+        <a href="coordinate-geometry.html"
+           class="chapter-card">
+
+            <div class="chapter-number">
+                CHAPTER 07
+            </div>
+
+            <h2>
+                Coordinate Geometry
+            </h2>
+
+            <p>
+                Notes, important questions,
+                practice material and quick
+                revision resources.
+            </p>
+
+            <span class="open-button">
+                Open Chapter →
+            </span>
+
+        </a>
+
+
+        <!-- CHAPTER 08 -->
+
+        <a href="introduction-to-trigonometry.html"
+           class="chapter-card">
+
+            <div class="chapter-number">
+                CHAPTER 08
+            </div>
+
+            <h2>
+                Introduction to Trigonometry
+            </h2>
+
+            <p>
+                Notes, important questions,
+                practice material and quick
+                revision resources.
+            </p>
+
+            <span class="open-button">
+                Open Chapter →
+            </span>
+
+        </a>
+
+
+        <!-- CHAPTER 09 -->
+
+        <a href="applications-of-trigonometry.html"
+           class="chapter-card">
+
+            <div class="chapter-number">
+                CHAPTER 09
+            </div>
+
+            <h2>
+                Some Applications of Trigonometry
+            </h2>
+
+            <p>
+                Notes, important questions,
+                practice material and quick
+                revision resources.
+            </p>
+
+            <span class="open-button">
+                Open Chapter →
+            </span>
+
+        </a>
+
+
+        <!-- CHAPTER 10 -->
+
+        <a href="circles.html"
+           class="chapter-card">
+
+            <div class="chapter-number">
+                CHAPTER 10
+            </div>
+
+            <h2>
+                Circles
+            </h2>
+
+            <p>
+                Notes, important questions,
+                practice material and quick
+                revision resources.
+            </p>
+
+            <span class="open-button">
+                Open Chapter →
+            </span>
+
+        </a>
+
+
+        <!-- CHAPTER 11 -->
+
+        <a href="areas-related-to-circles.html"
+           class="chapter-card">
+
+            <div class="chapter-number">
+                CHAPTER 11
+            </div>
+
+            <h2>
+                Areas Related to Circles
+            </h2>
+
+            <p>
+                Notes, important questions,
+                practice material and quick
+                revision resources.
+            </p>
+
+            <span class="open-button">
+                Open Chapter →
+            </span>
+
+        </a>
+
+
+        <!-- CHAPTER 12 -->
+
+        <a href="surface-areas-and-volumes.html"
+           class="chapter-card">
+
+            <div class="chapter-number">
+                CHAPTER 12
+            </div>
+
+            <h2>
+                Surface Areas and Volumes
+            </h2>
+
+            <p>
+                Notes, important questions,
+                practice material and quick
+                revision resources.
+            </p>
+
+            <span class="open-button">
+                Open Chapter →
+            </span>
+
+        </a>
+
+
+        <!-- CHAPTER 13 -->
+
+        <a href="statistics.html"
+           class="chapter-card">
+
+            <div class="chapter-number">
+                CHAPTER 13
+            </div>
+
+            <h2>
+                Statistics
+            </h2>
+
+            <p>
+                Notes, important questions,
+                practice material and quick
+                revision resources.
+            </p>
+
+            <span class="open-button">
+                Open Chapter →
+            </span>
+
+        </a>
+
+
+        <!-- CHAPTER 14 -->
+
+        <a href="probability.html"
+           class="chapter-card">
+
+            <div class="chapter-number">
+                CHAPTER 14
+            </div>
+
+            <h2>
+                Probability
+            </h2>
+
+            <p>
+                Notes, important questions,
+                practice material and quick
+                revision resources.
+            </p>
+
+            <span class="open-button">
+                Open Chapter →
+            </span>
+
+        </a>
+
+
+    </main>
+
+
+    <footer>
+
+        Aquivora Study • Class 10 Mathematics
+
+    </footer>
+
+
+</div>
+
+
+</body>
+
+</html>
